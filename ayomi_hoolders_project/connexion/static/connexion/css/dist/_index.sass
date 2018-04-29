@@ -1,0 +1,177 @@
+@import "global_values"
+
+$signup-background-color: #F5F5F5
+
+$wrapper-height: 450px
+$wrapper-width: 800px
+
+$button-height: 50px
+$button-width: 185px
+
+.wrapper
+	top: 15vh
+	margin: 0 auto
+	position: relative
+
+	background: linear-gradient(90deg, $signup-background-color 50%, white 50%)
+
+	height: $wrapper-height
+	width: $wrapper-width
+
+	border: 1px solid $primary-color
+
+	input[type="radio"]
+		position: absolute
+		top: 75%
+
+		appearance: none
+		display: flex
+		justify-content: center
+		align-items: center
+
+		height: $button-height
+		width: $button-width
+
+		border: 1px solid $accent-color
+
+		font-size: 1em
+		color: $accent-color
+
+		transition: all .2s ease-in-out
+
+		&#signup-button
+			left: 13%
+
+			&::after
+				content: "S'enregistrer"
+
+		&#login-button
+			left: 63%
+
+			&::after
+				content: "Se connecter"
+
+		&:hover
+			background-color: $accent-color
+			color: white
+
+#form-index
+	position: relative
+
+	width: 285px
+
+	bottom: 14%
+
+	padding: 1.5em 2em
+
+	background-color: white
+
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.05)
+
+	transition: transform .5s ease-in-out
+
+	z-index: 100
+
+	.form-group
+		transition: transform .5s ease-in-out
+
+	#form-button
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		width: 100%
+
+		background-color: $primary-color
+
+		font-size: 1.1em
+		color: white
+
+		transition: background-color .2s ease-in-out
+
+		margin-top: 1em
+
+		span
+			position: relative
+
+			transition: transform .5s ease-in-out, opacity .5s ease-in-out
+
+			&:first-of-type
+				top: -30px
+
+				&:last-of-type
+					bottom: -30px
+
+		&:hover
+			background-color: $accent-color
+
+/* ANIMATIONS */
+
+#signup-button:checked ~ form
+	.form-group
+		input:after
+			content: ""
+
+		&:first-of-type
+			transition: transform .5s ease-in-out, opacity .2s ease-in-out .33s
+
+		&:nth-of-type(2)
+			transition: transform .5s ease-in-out, opacity .2s ease-in-out .1s
+
+		&:nth-of-type(3)
+			transition: transform .5s ease-in-out, opacity .2s ease-in-out .05s
+
+	#form-button
+		span
+			&:first-of-type
+				transform: translateY(40px)
+
+			&:last-of-type
+				opacity: 0
+
+#login-button:checked ~ form
+	.form-group
+		transform: translateY(-215px)
+
+		&:first-of-type
+			transition: transform .5s ease-in-out, opacity .2s ease-in-out
+			pointer-events: none
+			opacity: 0
+
+		&:nth-of-type(2)
+			transition: transform .5s ease-in-out, opacity .2s ease-in-out .2s
+			pointer-events: none
+			opacity: 0
+
+		&:nth-of-type(3)
+			transition: transform .5s ease-in-out, opacity .2s ease-in-out .3s
+			pointer-events: none
+			opacity: 0
+
+	#form-button
+		span
+			&:first-of-type
+				opacity: 0
+
+			&:last-of-type
+				opacity: 100
+				transform: translateY(-12px)
+
+// MEDIA QUERIES
+@media screen and (min-width: 992px)
+	#form-index
+		left: 4em
+
+	#login-button:checked ~ form
+		transform: translateX(403px)
+
+@media screen and (max-width: 991px)
+	#form-index
+		left: 2.5em
+
+	#login-button:checked ~ form
+		transform: translateX(360px)
+
+@media screen and (max-width: 772px)
+	.wrapper
+		display: none

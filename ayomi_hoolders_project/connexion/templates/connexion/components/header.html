@@ -1,0 +1,16 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="navbar-content">
+		<div class="container">
+			<div class="navbar-header col-sm-5">
+				<a class="navbar-brand" href="#">
+					{% load static %}
+					<img class="img-responsive" src="{% static 'connexion/img/logo-hoolders.png' %}"
+					     alt="Logo de Hoolders">
+					<span>Investir Autrement</span>
+				</a>
+			</div>
+
+			<ul class="nav navbar-nav col-sm-7">
+				<li><a href="#">Investir</a></li>
+				<li><a href="#">Se financer</a></li>
+{% block user_intro %}{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'connexion/main_template.html' %}
+
+{% block title %}
+	<title>Hoolders - Investir Autrement</title>
+{% endblock %}
+
+{% block content %}
+	<div class="container" id="index-container">
+		<div class="wrapper">
+			<label for="signup-button"></label><input onclick="clearUselessFormInputs()" class="btn" type="radio"
+			                                          id="signup-button" name="form"
+			                                          checked="checked"/>
+			<label for="login-button"></label><input onclick="clearUselessFormInputs()" class="btn" type="radio"
+			                                         id="login-button" name="form"/>
+			<form id="form-index" method="post" action="{% url 'connexion:index' %}">
+				{% csrf_token %}
+				<div class="form-group">
+					<input type="text" name="first-name" placeholder="Prénom"/>
+				</div>
+
+				<div class="form-group">
+					<input type="text" name="last-name" placeholder="Nom"/>
+				</div>
+
+				<div class="form-group">
+					<input type="email" name="email" placeholder="Email"/>
+				</div>
+
+				<div class="form-group">
+					<input type="text" name="username" placeholder="Nom d'utilisateur">
+				</div>
+
+				<div class="form-group">
+					<input type="password" name="password" placeholder="Mot de passe"/>
+				</div>
+				<button class="btn" type="submit" id="form-button"><span>S'enregistrer</span><span>Se connecter</span>
+				</button>
+			</form>
+		</div>
+	</div>
+
+	<script>
+        function clearUselessFormInputs() {
+            let formGroups = document.getElementsByClassName('form-group');
+
+            for (let i = 0; i < formGroups.length - 2; i++) {
+                formGroups.item(i).firstElementChild.value = ""
+            }
+        }
+	</script>
+{% endblock %}

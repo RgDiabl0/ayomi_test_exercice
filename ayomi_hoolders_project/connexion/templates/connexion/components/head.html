@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	{% block title %}{% endblock %}
+
+	<!-- Normalize CSS-->
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css"/>
+
+	{% load static %}
+
+	<!-- Bootstrap Core CSS-->
+	<link rel="stylesheet" href="{% static 'connexion/css/bootstrap.min.css' %}"/>
+
+	<!-- Custom CSS-->
+	<link rel="stylesheet" href="{% static 'connexion/css/main_style.css' %}"/>
+
+</head>

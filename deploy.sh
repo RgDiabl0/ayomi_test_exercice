@@ -1,1 +1,0 @@
-virtualenv --no-site-packages --distribute env -p python2.7 && . env/bin/activate && pip install -r requirements.txt

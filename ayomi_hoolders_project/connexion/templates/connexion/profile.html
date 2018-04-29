@@ -1,0 +1,126 @@
+{% extends 'connexion/main_template.html' %}
+
+{% block title %}
+	<title>Hoolders - Espace personnel</title>
+{% endblock %}
+
+{% block user_intro %}
+	<li class="user_intro">
+		<span>{{ user.first_name }}</span>
+		<span class="text-uppercase">{{ user.last_name }}</span>
+	</li>
+{% endblock %}
+
+{% block content %}
+	<div class="row">
+		<div class="container" id="profile-intro-container">
+			<div class="profile-intro">
+				<div>
+					<h2 class="title">Tableau de bord</h2>
+					<h4 class="text-center subtitle"><span
+							class="text-uppercase">{{ user.last_name }}</span> {{ user.first_name }}</h4>
+				</div>
+				<button onclick="location.href='{% url 'connexion:logout_view' %}'" class="btn btn-danger">
+					<span class="glyphicon glyphicon-log-out"></span>
+				</button>
+			</div>
+
+			<div class="financing-enterprises">
+				<h5>Découvrir les entreprises en finançement</h5>
+				<button class="btn btn-info">Voir la liste</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="container">
+			<div class="col-md-3">
+				{% include 'connexion/components/side_menu.html' %}
+			</div>
+
+			<div class="buttons col-md-4">
+				<button id="btn-modify-infos-modal" class="btn" data-toggle="modal" data-target="#modify-infos-modal">
+					Modifier ses
+					informations
+				</button>
+				<button class="btn btn-primary">Changer de mot de passe</button>
+				<button class="btn btn-primary">Modifier son profil investisseur</button>
+			</div>
+
+			<div class="profile-infos col-md-5">
+				<h4 class="text-center">Mes informations</h4>
+				<ul class="infos">
+					<li id="username"><span>Nom d'utilisateur:</span> <span>{{ user.username }}</span></li>
+					<li id="first_name"><span>Prénom:</span> <span>{{ user.first_name }}</span></li>
+					<li id="last_name"><span>Nom:</span> <span class="text-uppercase">{{ user.last_name }}</span></li>
+					<li id="email"><span>Adresse email:</span> <span>{{ user.email }}</span></li>
+					<li id="birth_date"><span>Date de naissance:</span> <span>{{ user.birth_date }}</span></li>
+					<li id="home_phone_number"><span>Numéro de téléphone fixe:</span>
+						<span>{{ user.home_phone_number }}</span></li>
+					<li id="mobile_phone_number"><span>Numéro de téléphone mobile:</span>
+						<span>{{ user.mobile_phone_number }}</span></li>
+					<li id="address"><span>Adresse:</span> <span>{{ user.address }}</span></li>
+					<li id="city"><span>Ville:</span> <span>{{ user.city }}</span></li>
+					<li id="postal"><span>Code Postal:</span> <span>{{ user.postal }}</span></li>
+					<li id="website"><span>Site internet:</span> <span>{{ user.website }}</span></li>
+					<li id="desc"><span>Votre description:</span> <span>{{ user.desc }}</span></li>
+					<li id="linkedin"><span>Lien linkedin:</span> <span>{{ user.linkedin }}</span></li>
+					<li id="facebook"><span>Lien facebook:</span> <span>{{ user.facebook }}</span></li>
+					<li id="twitter"><span>Lien twitter:</span> <span>{{ user.twitter }}</span></li>
+					<li id="interests"><span>Centre d'intérêt:</span> <span>{{ user.interests }}</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="modify-infos-modal" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title">Modifier ses informations</h4>
+				</div>
+
+				<div class="modal-body">
+					<form id="form-modify-infos">
+						{% csrf_token %}
+						<div class="input-group">
+							<label for="new_email">Nouvelle adresse mail :</label>
+							<input type="email" name="new-email" placeholder="Adresse mail">
+						</div>
+					</form>
+				</div>
+
+				<div class="modal-footer">
+					<button class="btn btn-default" data-dismiss="modal">Close</button>
+					<button class="btn btn-primary" onclick="modify_infos()">Enregistrer</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+        function modify_infos() {
+            const testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,}$/i;
+            let email = $("input[name=new-email]");
+
+            if (testEmail.test(email.val())) {
+                $.ajax({
+                    url: 'modify_infos',
+                    type: 'POST',
+                    data: {
+                        'csrfmiddlewaretoken': "{{ csrf_token }}",
+                        'username': "{{ user.username }}",
+                        'new-email': email.val()
+                    },
+                    success: function (result) {
+                        $("#email span:last-of-type").text(result['email']);
+                        $("#modify-infos-modal").modal('toggle');
+                    }
+                })
+            }
+        }
+	</script>
+{% endblock %}

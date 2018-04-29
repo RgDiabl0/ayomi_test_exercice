@@ -1,0 +1,28 @@
+#menu
+	.item
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		min-height: 50px
+		width: 200px
+
+		background-color: $primary-color
+
+		color: white
+
+		padding: .5em
+
+		text-align: right
+
+		margin: 1px 0
+
+		text-decoration: none
+
+		cursor: pointer
+
+		&:hover
+			background-color: darken($primary-color, 10%)
+
+		&.active
+			background-color: lighten($primary-color, 10%)

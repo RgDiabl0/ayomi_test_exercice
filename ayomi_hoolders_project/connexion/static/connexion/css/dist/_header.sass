@@ -1,0 +1,63 @@
+$nav-background-color: #FFFFFF
+
+$nav-font-size: 15pt
+
+nav
+	height: $nav-height
+
+	font-family: "Orator Std", serif
+
+	.navbar-content
+		height: 100%
+		background-color: $nav-background-color
+
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
+
+		.navbar-header, .navbar-nav
+			display: flex
+			align-items: center
+
+		.container
+			height: 100%
+
+			.navbar-brand
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+
+				padding: 0
+
+				img
+					height: 120%
+
+					margin-bottom: .8em
+
+				span
+					font-size: $nav-font-size
+					color: $primary-color
+
+				&:hover
+					span
+						color: $accent-color
+
+			.navbar-nav
+				justify-content: flex-end
+
+				li
+					border-right: 1px solid darkgray
+					padding: .3em 1em .1em 1em
+
+					font-size: $nav-font-size
+					color: $primary-color
+
+					a
+						text-align: center
+						padding: 0
+						color: inherit
+
+						&:hover
+							color: $accent-color
+
+					&:last-of-type
+						border: 0

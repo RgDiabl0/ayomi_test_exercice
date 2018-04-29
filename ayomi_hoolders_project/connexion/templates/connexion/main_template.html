@@ -1,0 +1,23 @@
+{% include 'connexion/components/head.html' %}
+
+{% block title %}{% endblock %}
+
+<body>
+
+{% include 'connexion/components/header.html' %}
+
+{% block user_intro %}{% endblock %}
+</ul>
+</div>
+</div>
+</nav>
+
+{% block content %}{% endblock %}
+
+{% load static %}
+<!-- jQuery -->
+<script src="{% static 'connexion/js/jquery-3.3.1.min.js' %}"></script>
+
+<!-- Bootstrap Core JavaScript-->
+<script src="{% static 'connexion/js/bootstrap.min.js' %}"></script>
+</body>
