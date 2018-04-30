@@ -19,7 +19,7 @@ nav.navbar .navbar-content {
   height: 100%;
   background-color: #FFFFFF;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   padding: 1em 0;
 }
 
@@ -28,18 +28,18 @@ nav.navbar .navbar-content .navbar-header, nav.navbar .navbar-content .navbar-na
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 
 nav.navbar .navbar-content .container {
   height: 100%;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 
 nav.navbar .navbar-content .container .navbar-header {
@@ -53,14 +53,14 @@ nav.navbar .navbar-content .container .navbar-header .navbar-brand {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
   padding: 0;
 }
 
@@ -79,8 +79,8 @@ nav.navbar .navbar-content .container .navbar-header .navbar-brand:hover span {
 
 nav.navbar .navbar-content .container .navbar-nav {
   -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
   margin: .5em 0 0;
   padding: 0 !important;
 }
@@ -102,8 +102,8 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
 @media screen and (max-width: 650px) {
   nav.navbar .navbar-content .container .navbar-header .navbar-brand {
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+	  -ms-flex-pack: center;
+	  justify-content: center;
   }
 }
 
@@ -111,36 +111,31 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
   nav.navbar .navbar-content .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+	  -ms-flex-direction: column;
+	  flex-direction: column;
   }
-
   nav.navbar .navbar-content .container .navbar-header .navbar-brand span {
     display: none;
   }
-
   nav.navbar .navbar-content .container .navbar-nav {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+	  -ms-flex-direction: row;
+	  flex-direction: row;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+	  -ms-flex-pack: center;
+	  justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+	  -ms-flex-align: center;
+	  align-items: center;
   }
-
   nav.navbar .navbar-content .container .navbar-nav li {
     border-bottom: 0;
     border-right: 1px solid darkgray;
   }
-
   nav.navbar .navbar-content .container .navbar-nav li:first-of-type {
     padding-right: 0.5em;
   }
-
   nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
     border: 0;
     padding-left: 0.5em;
@@ -156,17 +151,17 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
 .wrapper input[type="radio"] {
   position: absolute;
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+	-moz-appearance: none;
+	appearance: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
   height: 50px;
   width: 185px;
   border: 1px solid #66BB6A;
@@ -190,17 +185,17 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
   -webkit-box-flex: 2;
-  -ms-flex: 2;
-  flex: 2;
+	-ms-flex: 2;
+	flex: 2;
   width: 285px;
   bottom: 14%;
   padding: 1.5em 2em;
   background-color: white;
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.05);
   -webkit-transition: -webkit-transform .5s ease-in-out;
   transition: -webkit-transform .5s ease-in-out;
   transition: transform .5s ease-in-out;
@@ -222,11 +217,11 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
   width: 100%;
   background-color: #EAB057;
   font-size: 1.1em;
@@ -260,7 +255,7 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
 /* ANIMATIONS */
 #signup-button:checked ~ form #form-button span:first-of-type {
   -webkit-transform: translateY(40px);
-  transform: translateY(40px);
+	transform: translateY(40px);
 }
 
 #signup-button:checked ~ form #form-button span:last-of-type {
@@ -269,7 +264,7 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
 
 #login-button:checked ~ form .form-group {
   -webkit-transform: translateY(-215px);
-  transform: translateY(-215px);
+	transform: translateY(-215px);
 }
 
 #login-button:checked ~ form .form-group:first-of-type {
@@ -286,10 +281,10 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
 
 #login-button:checked ~ form #form-button span:last-of-type {
   -webkit-transform: translateY(-40px);
-  transform: translateY(-40px);
+	transform: translateY(-40px);
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 772px) {
   .wrapper {
     top: 10em;
     background: -webkit-gradient(linear, left top, right top, color-stop(50%, #F5F5F5), color-stop(50%, white));
@@ -298,43 +293,37 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
     width: 800px;
     border: 1px solid #EAB057;
   }
-
   .wrapper input[type="radio"] {
     top: 75%;
     color: #66BB6A;
   }
-
   .wrapper input[type="radio"]#signup-button {
     left: 13%;
   }
-
   .wrapper input[type="radio"]#login-button {
     left: 63%;
   }
-
   .wrapper input[type="radio"]#login-button:checked ~ form {
-    -webkit-transform: translateX(403px);
-    transform: translateX(403px);
+	  -webkit-transform: translateX(360px);
+	  transform: translateX(360px);
   }
-
   .wrapper input[type="radio"]:hover {
     background-color: #66BB6A;
     color: white;
   }
-
   .wrapper #form-index {
-    left: 4em;
+    left: 2.5em;
   }
 }
 
-@media screen and (max-width: 991px) {
-  #form-index {
-    left: 2.5em;
-  }
+@media screen and (min-width: 992px) {
+	.wrapper input[type="radio"]#login-button:checked ~ form {
+		-webkit-transform: translateX(403px);
+		transform: translateX(403px);
+	}
 
-  #login-button:checked ~ form {
-    -webkit-transform: translateX(360px);
-    transform: translateX(360px);
+	.wrapper #form-index {
+		left: 4em;
   }
 }
 
@@ -342,39 +331,32 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
   .wrapper {
     top: 5em;
   }
-
   .wrapper input[type="radio"] {
     left: 17%;
     background-color: #66BB6A;
     color: white;
   }
-
   .wrapper input[type="radio"]#signup-button {
     top: 69.5%;
   }
-
   .wrapper input[type="radio"]#login-button {
     top: 92.5%;
   }
-
   .wrapper input[type="radio"]#login-button:checked {
     -webkit-transform: translateY(-110px);
-    transform: translateY(-110px);
+	  transform: translateY(-110px);
   }
-
   .wrapper input[type="radio"]#login-button:checked ~ #signup-button {
     -webkit-transform: translateY(110px);
-    transform: translateY(110px);
+	  transform: translateY(110px);
   }
-
   .wrapper input[type="radio"]#login-button:checked ~ form {
     -webkit-transform: none;
-    transform: none;
+	  transform: none;
     -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
+	  -ms-flex: 1;
+	  flex: 1;
   }
-
   .wrapper #form-index {
     left: 0;
   }
@@ -385,11 +367,11 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
   min-height: 50px;
   width: 100%;
   background-color: #EAB057;
@@ -443,14 +425,14 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
   z-index: 10;
 }
 
@@ -473,7 +455,7 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
   background-color: #EAB057;
   z-index: 5;
   -webkit-box-shadow: 3px 0 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+	box-shadow: 3px 0 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 #hamburger-content #menu {
@@ -495,12 +477,12 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
 
 #hamburger-checkbox:checked {
   -webkit-transform: translate3d(152px, 0, 0);
-  transform: translate3d(152px, 0, 0);
+	transform: translate3d(152px, 0, 0);
 }
 
 #hamburger-checkbox:checked ~ #hamburger-icon {
   -webkit-transform: translate3d(152px, 0, 0);
-  transform: translate3d(152px, 0, 0);
+	transform: translate3d(152px, 0, 0);
   -webkit-transition: all .5s ease-in-out .005s;
   transition: all .5s ease-in-out .005s;
 }
@@ -515,7 +497,7 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
 
 #hamburger-checkbox:checked ~ #hamburger-icon #top-bar {
   -webkit-transform: rotate(45deg) translate3d(5px, 5px, 0);
-  transform: rotate(45deg) translate3d(5px, 5px, 0);
+	transform: rotate(45deg) translate3d(5px, 5px, 0);
   background-color: white;
 }
 
@@ -526,13 +508,13 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
 
 #hamburger-checkbox:checked ~ #hamburger-icon #bottom-bar {
   -webkit-transform: rotate(-45deg) translate3d(5px, -5px, 0);
-  transform: rotate(-45deg) translate3d(5px, -5px, 0);
+	transform: rotate(-45deg) translate3d(5px, -5px, 0);
   background-color: white;
 }
 
 #hamburger-checkbox:checked ~ #hamburger-content {
   -webkit-transform: translate3d(81.9%, 0, 0);
-  transform: translate3d(81.9%, 0, 0);
+	transform: translate3d(81.9%, 0, 0);
   -webkit-transition: opacity .2s ease-in, -webkit-transform .5s ease-in-out;
   transition: opacity .2s ease-in, -webkit-transform .5s ease-in-out;
   transition: transform .5s ease-in-out, opacity .2s ease-in;
@@ -590,8 +572,8 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
 #profile-intro-row .container {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
 }
 
 #profile-intro-row .profile-intro {
@@ -599,11 +581,11 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
   border-bottom: 1px solid #BDBDBD;
   padding-bottom: 1em;
   margin-bottom: 1em;
@@ -628,10 +610,10 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-item-align: center;
-  align-self: center;
+	align-self: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
   background-color: #d0ead1;
   border-radius: 10px;
   padding: 1em;
@@ -647,11 +629,11 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
   -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
 }
 
 .main-content .buttons {
@@ -660,8 +642,8 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
 }
 
 .main-content .buttons button {
@@ -684,8 +666,8 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
   padding: 1em;
   margin: 1em 0;
   -webkit-box-flex: .5;
-  -ms-flex-positive: .5;
-  flex-grow: .5;
+	-ms-flex-positive: .5;
+	flex-grow: .5;
 }
 
 .main-content .profile-infos h4 {
@@ -710,11 +692,11 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: centeR;
-  -ms-flex-pack: centeR;
-  justify-content: centeR;
+	-ms-flex-pack: centeR;
+	justify-content: centeR;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 
 #form-modify-infos .input-group input {
@@ -728,11 +710,11 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+	  -ms-flex-direction: column;
+	  flex-direction: column;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+	  -ms-flex-align: center;
+	  align-items: center;
   }
 }
 
@@ -740,14 +722,12 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
   #profile-intro-row .profile-intro {
     margin-top: 1em;
   }
-
   #profile-intro-row .financing-enterprises {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+	  -ms-flex-direction: column;
+	  flex-direction: column;
   }
-
   .row .container #menu {
     display: none;
   }
@@ -757,11 +737,10 @@ nav.navbar .navbar-content .container .navbar-nav li:last-of-type {
   #profile-intro-row .profile-intro {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+	  -ms-flex-direction: column;
+	  flex-direction: column;
     padding-bottom: 1em;
   }
-
   #profile-intro-row .profile-intro div {
     margin: 0;
   }

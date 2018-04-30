@@ -125,7 +125,7 @@ $button-width: 185px
 				transform: translateY(-40px)
 
 // MEDIA QUERIES
-@media screen and (min-width: 992px)
+@media screen and (min-width: 772px)
 	.wrapper
 		top: 10em
 
@@ -147,21 +147,25 @@ $button-width: 185px
 				left: 63%
 
 				&:checked ~ form
-					transform: translateX(403px)
+					transform: translateX(360px)
 
 			&:hover
 				background-color: $accent-color
 				color: white
 
 		#form-index
+			left: 2.5em
+
+@media screen and (min-width: 992px)
+	.wrapper
+		input[type="radio"]
+			&#login-button
+				&:checked ~ form
+					transform: translateX(403px)
+
+		#form-index
 			left: 4em
 
-@media screen and (max-width: 991px)
-	#form-index
-		left: 2.5em
-
-	#login-button:checked ~ form
-		transform: translateX(360px)
 
 @media screen and (max-width: 772px)
 	.wrapper
