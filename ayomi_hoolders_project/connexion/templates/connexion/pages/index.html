@@ -7,12 +7,12 @@
 {% block content %}
 	<div class="container" id="index-container">
 		<div class="wrapper">
+			<label for="login-button"></label><input onclick="clearUselessFormInputs()" class="btn" type="radio"
+			                                         id="login-button" name="form"/>
 			<label for="signup-button"></label><input onclick="clearUselessFormInputs()" class="btn" type="radio"
 			                                          id="signup-button" name="form"
 			                                          checked="checked"/>
-			<label for="login-button"></label><input onclick="clearUselessFormInputs()" class="btn" type="radio"
-			                                         id="login-button" name="form"/>
-			<form id="form-index" method="post" action="{% url 'connexion:index' %}">
+			<form id="form-index" method="post" action="{% url 'index' %}">
 				{% csrf_token %}
 				<div class="form-group">
 					<input type="text" name="first-name" placeholder="Prénom"/>

@@ -1,0 +1,131 @@
+@import "../components/side_menu"
+@import "../components/hamburger_menu"
+
+#profile-intro-row
+	padding-bottom: 1em
+	margin-bottom: 1em
+
+	border-bottom: 1px solid #BDBDBD
+
+	.container
+		flex-direction: column
+
+	.profile-intro
+		display: flex
+		align-items: center
+		justify-content: center
+
+		border-bottom: 1px solid #BDBDBD
+
+		padding-bottom: 1em
+		margin-bottom: 1em
+
+		div
+			margin-right: 2em
+
+			.title
+				font:
+					size: 2.5em
+					weight: bold
+
+			.subtitle
+				font-size: 2em
+
+				color: lighten($font-color, 20%)
+
+	.financing-enterprises
+		display: flex
+		align-self: center
+		align-items: center
+
+		background-color: lighten($accent-color, 30%)
+
+		border-radius: 10px
+
+		padding: 1em
+
+		h5
+			font-weight: bold
+
+			margin-right: 1em
+
+.main-content
+	display: flex
+	justify-content: space-between
+	flex-grow: 1
+
+	.buttons
+		display: flex
+		flex-direction: column
+
+		button
+			margin: .5em 0
+			width: 215px
+
+			&.btn-primary
+				background-color: $accent-color
+				border-color: darken($accent-color, 5%)
+
+				&:active
+					background-color: darken($accent-color, 20%)
+
+	.profile-infos
+		background-color: lighten($accent-color, 25%)
+
+		border-radius: 25px
+
+		padding: 1em
+
+		margin: 1em 0
+
+		flex-grow: .5
+
+		h4
+			font-weight: bold
+
+		.infos
+			padding: 0 1em
+			list-style-type: none
+
+			li
+				padding: .3em 0
+
+				span:first-of-type
+					font-weight: bold
+
+#form-modify-infos
+	.input-group
+		display: flex
+		justify-content: centeR
+		align-items: center
+
+		input
+			margin-left: 1em
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 995px)
+	.main-content
+		display: flex
+		flex-direction: column
+		align-items: center
+
+@media screen and (max-width: 414px)
+	#profile-intro-row
+		.profile-intro
+			margin-top: 1em
+
+		.financing-enterprises
+			flex-direction: column
+
+	.row .container #menu
+		display: none
+
+@media screen and (max-width: 365px)
+	#profile-intro-row .profile-intro
+		flex-direction: column
+
+		padding-bottom: 1em
+
+		div
+			margin: 0

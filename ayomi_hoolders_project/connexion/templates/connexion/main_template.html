@@ -6,12 +6,6 @@
 
 {% include 'connexion/components/header.html' %}
 
-{% block user_intro %}{% endblock %}
-</ul>
-</div>
-</div>
-</nav>
-
 {% block content %}{% endblock %}
 
 {% load static %}
@@ -20,4 +14,8 @@
 
 <!-- Bootstrap Core JavaScript-->
 <script src="{% static 'connexion/js/bootstrap.min.js' %}"></script>
+
+<!-- Custom JavaScript -->
+<script src="{% static 'connexion/js/main_script.js' %}"></script>
+
 </body>

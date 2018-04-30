@@ -49,7 +49,7 @@ MIDDLEWARE_CLASSES = (
 	'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'ayomi_hoolders_project.urls'
+ROOT_URLCONF = 'connexion.urls'
 
 TEMPLATES = [
 	{
@@ -102,3 +102,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'connexion.CustomUser'
+LOGIN_URL = '/'
+LOGOUT_REDIRECT_URL = LOGIN_URL

@@ -1,0 +1,110 @@
+$nav-background-color: #FFFFFF
+
+$nav-font-size: 1.5em
+
+$nav-li-padding-size: 1em
+
+nav.navbar
+	font:
+		family: "Orator Std", serif
+		size: $nav-font-size
+
+	margin-bottom: 0
+
+	a
+		text-align: center
+		padding: 0
+		color: inherit !important
+
+		font-size: inherit
+
+		&:hover
+			color: $accent-color !important
+
+	.navbar-content
+		height: 100%
+		background-color: $nav-background-color
+
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
+
+		padding: 1em 0
+
+		.navbar-header, .navbar-nav
+			display: flex
+			align-items: center
+
+		.container
+			height: 100%
+			justify-content: space-between
+			align-items: center
+
+			.navbar-header
+				height: 100%
+
+				.navbar-brand
+					height: 100%
+
+					display: flex
+					flex-direction: column
+					justify-content: space-between
+					align-items: center
+
+					padding: 0
+
+					img
+						width: 200px
+
+						margin-bottom: .5em
+
+					span
+						color: $primary-color
+
+					&:hover
+						span
+							color: $accent-color
+
+			.navbar-nav
+				justify-content: flex-end
+				margin: .5em 0 0
+				padding: 0 !important
+
+				li
+					border-right: 1px solid darkgray
+
+					color: $primary-color
+
+					&:first-of-type
+						padding-right: $nav-li-padding-size
+
+					&:last-of-type
+						padding-left: $nav-li-padding-size
+						border: 0
+
+@media screen and (max-width: 650px)
+	nav.navbar .navbar-content .container .navbar-header .navbar-brand
+		justify-content: center
+
+@media screen and (max-width: 600px)
+	$nav-li-padding-size: .5em
+	nav.navbar .navbar-content .container
+		flex-direction: column
+
+		.navbar-header .navbar-brand
+			span
+				display: none
+
+		.navbar-nav
+			flex-direction: row
+			justify-content: center
+			align-items: center
+
+			li
+				border-bottom: 0
+				border-right: 1px solid darkgray
+
+				&:first-of-type
+					padding-right: $nav-li-padding-size
+
+				&:last-of-type
+					border: 0
+					padding-left: $nav-li-padding-size

@@ -1,0 +1,149 @@
+$background-color: #BDBDBD
+$screen-color: #FFFFFF
+$hamburger-menu-color: $primary-color
+$bar-color: #616161
+
+$screen-width: 300px
+$screen-height: 2*$screen-width
+$hamburger-icon-size: 2em
+$bar-height: 3px
+
+#hamburger-menu
+	position: absolute
+	left: -150px
+
+	width: 200px
+	height: 100%
+
+	display: none
+
+	#hamburger-checkbox
+		position: absolute
+		top: .7em
+		right: .7em
+
+		width: $hamburger-icon-size - .15em
+		height: $hamburger-icon-size - .15em
+
+		margin: 0
+
+		z-index: 100
+
+		opacity: 0
+
+	#hamburger-icon
+		position: absolute
+		top: .7em
+		right: .7em
+
+		width: $hamburger-icon-size - .15em
+		height: $hamburger-icon-size - .15em
+
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+
+		z-index: 10
+
+		.bar
+			display: block
+
+			width: 100%
+			height: $bar-height
+
+			background-color: $bar-color
+
+			margin: 2px 0
+
+			border-radius: 50px
+
+#hamburger-content
+	position: fixed
+	top: 1px
+	left: -164px
+
+	max-width: 200px
+
+	opacity: 0
+
+	padding-top: 3.5em
+
+	background-color: $hamburger-menu-color
+
+	z-index: 5
+
+	box-shadow: 3px 0 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+
+	#menu
+		height: 100%
+		padding: 0
+
+		overflow-y: auto
+
+#hamburger-overlay
+	position: fixed
+	top: 1px
+	right: 0
+
+	background-color: rgb(0, 0, 0)
+	opacity: 0
+
+	height: 100%
+	width: 100%
+	z-index: 0
+
+// ANIMATIONS
+#hamburger-checkbox
+	&:checked
+		transform: translate3d(152px, 0, 0)
+
+		& ~ #hamburger-icon
+			transform: translate3d(152px, 0, 0)
+			transition: all .5s ease-in-out .005s
+
+			.bar
+				width: 85%
+				transition: transform .5s ease-in, background-color .2s ease-in
+
+			#top-bar
+				transform: rotate(45deg) translate3d(5px, 5px, 0)
+				background-color: white
+
+			#middle-bar
+				opacity: 0
+				background-color: white
+
+			#bottom-bar
+				transform: rotate(-45deg) translate3d(5px, -5px, 0)
+				background-color: white
+
+		& ~ #hamburger-content
+			transform: translate3d(81.9%, 0, 0)
+			transition: transform .5s ease-in-out, opacity .2s ease-in
+			opacity: 100
+
+		& ~ #hamburger-overlay
+			transition: opacity .2s ease-in .3s
+			opacity: .2
+
+	&:not(:checked)
+		& ~ #hamburger-icon
+			transition: all .5s ease-in-out
+
+			.bar
+				transition: transform .5s ease-out, background-color 1.5s ease-out
+
+			#middle-bar
+				transition: opacity .5s ease-in .3s
+
+		& ~ #hamburger-content
+			transition: transform .5s ease-in-out .005s, opacity .2s ease-in-out .3s
+
+		& ~ #hamburger-overlay
+			transition: opacity .1s ease-out 0s
+
+// MEDIA QUERIES
+@media screen and (max-width: 414px)
+	#hamburger-menu
+		display: initial
