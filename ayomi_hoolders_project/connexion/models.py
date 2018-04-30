@@ -1,6 +1,7 @@
 # coding=utf-8
+
 from django.contrib.auth.models import AbstractUser
-from django.core.validators import RegexValidator
+from django.core.validators import RegexValidator, URLValidator
 from django.db import models
 
 
@@ -18,7 +19,7 @@ class CustomUser(AbstractUser):
 	numeric_regex = RegexValidator(r'^[0-9]*', message="Ce champs ne peut contenir que des chiffres.")
 	postal = models.CharField(validators=[numeric_regex], max_length=5, blank=True, null=True)
 
-	website = models.URLField(blank=True, null=True)
+	website = models.CharField(validators=[URLValidator], max_length=100, null=True)
 
 	desc = models.TextField(blank=True, null=True)
 

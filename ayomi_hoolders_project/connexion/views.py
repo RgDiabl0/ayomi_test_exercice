@@ -27,7 +27,7 @@ def index(request):
 				# Checking if the user already exists, if it doesn't -> creates the user
 				if not CustomUser.objects.filter(username=username).exists():
 					CustomUser.objects.create_user(username=username, email=email, password=password,
-					                               first_name=first_name, last_name=last_name.upper()).full_clean()
+					                               first_name=first_name, last_name=last_name.upper()).clean_fields()
 
 				# Connecting the user
 				if connect_user(request, username, password):
